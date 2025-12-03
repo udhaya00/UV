@@ -21,7 +21,7 @@ jobs:
       run: docker build -t mywebapp:v1 .
 
     - name: Copy files to EC2
-      run: scp -o StrictHostKeyChecking=no Dockerfile index.html ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/ubuntu/app/
+      run: scp -o StrictHostKeyChecking=no Dockerfile signup.html ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/ubuntu/app/
 
     - name: Deploy container on EC2
       run: |
