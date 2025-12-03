@@ -16,7 +16,7 @@ jobs:
       uses: webfactory/ssh-agent@v0.7.0
       with:
         ssh-private-key: ${{ secrets.EC2_KEY }}
-
+        
     - name: Build Docker image
       run: docker build -t mywebapp:v1 .
 
